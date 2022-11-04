@@ -5,6 +5,6 @@ const handleInput = () => {
   if (output) {
     output.textContent = input.value.trim() || "Anonymous";
   }
-}
+};
 
 input?.addEventListener("input", handleInput);

@@ -11,7 +11,6 @@ function destroyBoxes(element) {
   element.innerHTML = "";
 }
 
-
 const controls = document.querySelector("div#controls");
 const input = controls.querySelector("input");
 const createButton = controls.querySelector("button[data-create]");
