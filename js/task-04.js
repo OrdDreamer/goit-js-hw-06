@@ -9,12 +9,12 @@ const incrementButton = document.querySelector(
 let counterValue = 0;
 
 const updateCounter = (value) => {
-  if (Number.isNaN(+value)) {
+  if (Number.isNaN(Number(value))) {
     return;
   }
-  counterValue += +value;
+  counterValue += Number(value);
   if (outputElement) {
-    outputElement.textContent = String(counterValue);
+    outputElement.textContent = counterValue;
   }
 };
 

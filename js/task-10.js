@@ -17,7 +17,7 @@ const createButton = controls.querySelector("button[data-create]");
 const destroyButton = controls.querySelector("button[data-destroy]");
 const boxesOutput = document.querySelector("div#boxes");
 
-createButton?.addEventListener("click", () => {
+createButton && createButton.addEventListener("click", () => {
   const boxes = [];
   const count = +input.value >= 0 ? +input.value : 0;
   for (let i = 0; i < count; i++) {

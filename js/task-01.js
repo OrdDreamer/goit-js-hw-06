@@ -2,7 +2,7 @@ const categories = document.querySelectorAll("li.item");
 
 console.log(`Number of categories: ${categories.length}`);
 
-for (const category of categories) {
+categories.forEach((category) => {
   const categoryTitle = category.querySelector("h2");
   console.log(
     `Category: ${
@@ -12,4 +12,4 @@ for (const category of categories) {
 
   const categoryList = category.querySelector("ul");
   console.log(`Elements: ${categoryList ? categoryList.children.length : 0}`);
-}
+});

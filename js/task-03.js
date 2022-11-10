@@ -13,19 +13,18 @@ const images = [
   },
 ];
 
+const getListItem = (url, alt) => {
+  return `<li class="gallery__item">
+            <img src="${url}" alt="${alt}" class="item__image" />
+          </li>`;
+};
+
 const listElement = document.querySelector("ul.gallery");
 
 if (listElement) {
-  listElement.insertAdjacentHTML(
-    "afterbegin",
-    images
-      .map(
-        (image) => `
-          <li class="gallery__item">
-            <img src="${image.url}" alt="${image.alt}" class="item__image" />
-          </li>
-        `
-      )
-      .join("")
-  );
+  const listItems = images
+  .map((image) => getListItem(image.url, image.alt))
+  .join("");
+
+  listElement.insertAdjacentHTML("afterbegin", listItems);
 }
